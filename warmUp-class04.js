@@ -8,12 +8,16 @@
 // findWaldo(['Waldo', 'Jimmy', 'James', 'Jamie', 'Waldo']) // ['Found Waldo!', 'Jimmy', 'James', 'Jamie', 'Found Waldo!']
 
 function findWaldo(group) {
-    for(let i = 0; i <= group.length; i++)
+    let newArr= []
+    
+    for(let i = 0; i < group.length; i++)
     if (group[i] === 'Waldo') {
-        console.log('Found Waldo!')
-    } else{
-        console.log(group)
+       newArr.push("I found Waldo!")
+    } else {
+        newArr.push(group[i])
     }
+    return newArr;
 }
 
 console.log(findWaldo(['Stacy', 'Waldo', 'John']))
+console.log(findWaldo(['Waldo', 'Jimmy', 'James', 'Jamie', 'Waldo']))
